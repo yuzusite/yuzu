@@ -1,0 +1,67 @@
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明の背景色 */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%; /* ヘッダーを画面幅いっぱいにする */
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    margin-bottom: 20px; /* ヘッダーの下に余白 */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 10px;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+main {
+    padding-top: 30px; /* ヘッダー分の高さ調整 */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    background-image: url("images/IMG_5117 2.JPG");
+    background-size: cover; /* 画像を画面全体に広げる */
+    background-attachment: fixed; /* スクロールしても背景を固定 */
+    background-position: center; /* 背景の位置を中央に設定 */
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+                url("images/IMG_5117 2.JPG");
+}
+
+h1 {
+    color: #2c3e50;
+}
