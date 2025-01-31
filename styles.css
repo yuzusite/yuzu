@@ -65,3 +65,25 @@ body {
 h1 {
     color: #2c3e50;
 }
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 1.2em;
+    }
+
+    img {
+        width: 100%; /* 画像を画面幅に合わせる */
+        max-width: 300px;
+        height: auto;
+    }
+}
