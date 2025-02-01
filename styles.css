@@ -10,14 +10,23 @@ header {
     margin-bottom: 20px; /* ヘッダーの下に余白 */
 }
 
+header .container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav {
     display: flex;
-    justify-content: space-around;
-    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
 
 .menu {
     list-style: none;
@@ -27,8 +36,13 @@ nav {
     margin: 0;
 }
 
-.menu li {
-    display: inline;
+.menu-left {
+    margin-right: auto;
+}
+
+.menu-right {
+    display: flex;
+    gap: 15px;
 }
 
 .menu a {
@@ -47,6 +61,18 @@ main {
     padding-top: 30px; /* ヘッダー分の高さ調整 */
 }
 
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(100px); /* 右からの位置 */
+    transition: all 1s ease-in-out;
+}
+
+.fade-in-right.show {
+    opacity: 1;
+    transform: translateX(0); /* 元の位置 */
+}
+
+
 
 body {
     font-family: Arial, sans-serif;
@@ -54,13 +80,17 @@ body {
     color: #333;
     text-align: center;
     padding: 20px;
-    background-image: url("images/IMG_5117 2.JPG");
-    background-size: cover; /* 画像を画面全体に広げる */
-    background-attachment: fixed; /* スクロールしても背景を固定 */
-    background-position: center; /* 背景の位置を中央に設定 */
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
-                url("images/IMG_5117 2.JPG");
 }
+
+.container {
+    max-width: 800px; /* サイト全体の幅を狭くする */
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto; /* 中央揃え */
+    background-color: rgba(255, 255, 255, 0.8); /* 背景が薄く見える白色 */
+    border-radius: 10px; /* 角を丸くする */
+}
+
 
 h1 {
     color: #2c3e50;
