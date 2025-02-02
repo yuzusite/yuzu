@@ -1,31 +1,20 @@
+/* ヘッダー設定 */
 header {
-    background-color: rgba(0, 0, 0, 0.8); /* 半透明の背景色 */
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 10px 0;
     position: fixed;
-    width: 100%; /* ヘッダーを画面幅いっぱいにする */
+    width: 100%;
     top: 0;
     z-index: 1000;
-    left: 0;
-    margin-bottom: 20px; /* ヘッダーの下に余白 */
-}
-
-header .container {
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* ナビゲーションを中央に配置 */
     align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
+    gap: 20px;
 }
 
 .menu {
@@ -34,15 +23,6 @@ nav {
     gap: 20px;
     padding: 0;
     margin: 0;
-}
-
-.menu-left {
-    margin-right: auto;
-}
-
-.menu-right {
-    display: flex;
-    gap: 15px;
 }
 
 .menu a {
@@ -57,63 +37,35 @@ nav {
     border-radius: 5px;
 }
 
-main {
-    padding-top: 30px; /* ヘッダー分の高さ調整 */
-}
-
-.fade-in-right {
-    opacity: 0;
-    transform: translateX(100px); /* 右からの位置 */
-    transition: all 1s ease-in-out;
-}
-
-.fade-in-right.show {
-    opacity: 1;
-    transform: translateX(0); /* 元の位置 */
-}
-
-
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-    padding: 20px;
-}
-
-.container {
-    max-width: 800px; /* サイト全体の幅を狭くする */
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto; /* 中央揃え */
-    background-color: rgba(255, 255, 255, 0.8); /* 背景が薄く見える白色 */
-    border-radius: 10px; /* 角を丸くする */
-}
-
-
-h1 {
-    color: #2c3e50;
+/* ハンバーガーメニュー */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
         flex-direction: column;
-        gap: 10px;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
     }
 
-    .menu a {
-        font-size: 1.2em;
+    .menu.show {
+        display: flex;
     }
 
-    img {
-        width: 100%; /* 画像を画面幅に合わせる */
-        max-width: 300px;
-        height: auto;
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
     }
 }

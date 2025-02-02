@@ -15,16 +15,18 @@
     <div class="container">
         <header>
             <nav>
-                <ul class="menu menu-left">
+                <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- ハンバーガーメニューアイコン -->
+                <ul class="menu">
                     <li><a href="#">ホーム</a></li>
-                </ul>
-                <ul class="menu menu-right">
                     <li><a href="#">プロフィール</a></li>
                     <li><a href="#">ブログ</a></li>
                     <li><a href="#">お問い合わせ</a></li>
                 </ul>
+                <div class="menu-close" onclick="closeMenu()">&#10005;</div> <!-- バツボタン -->
             </nav>
-        </header> 
+        </header>
+        
+        
 
         <main>
             <h1>ゆずさいとー</h1>
