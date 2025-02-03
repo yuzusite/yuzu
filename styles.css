@@ -1,28 +1,47 @@
-/* ヘッダー設定 */
+/* ヘッダーの設定 */
 header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明の背景色 */
     color: white;
     padding: 10px 0;
     position: fixed;
-    width: 100%;
+    width: 100%; /* ヘッダーを画面幅いっぱいにする */
     top: 0;
     z-index: 1000;
-    text-align: center;
+    left: 0;
+    margin-bottom: 20px; /* ヘッダーの下に余白 */
+}
+
+header .container {
+    max-width: 800px; /* メインの幅と一致させる */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav {
     display: flex;
-    justify-content: center; /* ナビゲーションを中央に配置 */
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    width: 100%;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
+
+/* メニュー */
 .menu {
     list-style: none;
     display: flex;
     gap: 20px;
     padding: 0;
     margin: 0;
+}
+
+.menu-left {
+    margin-right: auto;
 }
 
 .menu a {
@@ -37,35 +56,134 @@ nav {
     border-radius: 5px;
 }
 
-/* ハンバーガーメニュー */
+/* メインコンテンツの調整 */
+main {
+    padding: 70px 0; /* 左右の余白をなくす */
+    margin: 0;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 800px; /* サイト全体の幅を狭くする */
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto; /* 中央揃え */
+    background-color: rgba(255, 255, 255, 0.8); /* 背景が薄く見える白色 */
+    border-radius: 10px; /* 角を丸くする */
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+/* ハンバーガーメニュー用 */
 .menu-toggle {
-    display: none;
+    display: block;
     font-size: 30px;
     cursor: pointer;
+    position: relative;
+    margin-left: 10px; /* 左端から少し右に寄せる */
+    display: none;
+}
+
+
+.menu-close {
+    display: none; /* 初期状態では非表示 */
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
 }
 
 @media (max-width: 768px) {
+    /* メニューのリスト全体はデフォルトで隠す */
     .menu {
         display: none;
+        width: 100%;
+        text-align: center;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
         background-color: rgba(0, 0, 0, 0.9);
         flex-direction: column;
+        gap: 20px;
         height: 100vh;
         justify-content: center;
         align-items: center;
     }
 
+    /* メニューを表示したときの設定 */
     .menu.show {
         display: flex;
     }
 
+    /* ハンバーガーメニューアイコン */
     .menu-toggle {
         display: block;
-        position: absolute;
-        right: 20px;
-        top: 20px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* バツボタンの初期状態 */
+    .menu-close {
+        display: none;
+    }
+
+    /* メニューが表示されているときのバツボタン */
+    .menu-close.show {
+        display: block;
+    }
+
+    /* メニューが開いている時、bodyのスクロールを無効にする */
+    body.menu-open {
+        overflow: hidden;
     }
 }
+
+/* フッターの設定 */
+footer {
+    background-color: #333; /* 背景色 */
+    color: white;
+    padding: 10px 0; /* 上下の余白 */
+    text-align: center;
+}
+
+footer .footer-container {
+    max-width: 800px; /* メインコンテンツと同じ最大幅 */
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+footer .footer-links li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+

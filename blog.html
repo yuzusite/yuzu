@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブログ</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- ハンバーガーメニューアイコン -->
+        <ul class="menu">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="blog.html">ブログ</a></li>
+          <li><a href="development.html">開発メモ</a></li> <!-- 開発メモリンク -->
+        </ul>
+        <div class="menu-close" onclick="closeMenu()">&#10005;</div> <!-- バツボタン -->
+      </nav>
+    </header>
+
+    <main>
+      <h1>ブッログ</h1>
+      
+      <div class="blog-posts">
+        <div class="blog-post">
+          <h2><a href="blog-post1.html">ブログ記事タイトル 1</a></h2>
+          <p>投稿日: 2025年2月3日</p>
+          <p>このブログ記事の概要がここに表示されます。記事の詳細を読むためにはタイトルをクリックしてください。</p>
+        </div>
+
+        <div class="blog-post">
+          <h2><a href="blog-post2.html">ブログ記事タイトル 2</a></h2>
+          <p>投稿日: 2025年2月1日</p>
+          <p>別のブログ記事の概要がここに表示されます。タイトルをクリックして詳細を確認できます。</p>
+        </div>
+
+        <div class="blog-post">
+          <h2><a href="blog-post3.html">ブログ記事タイトル 3</a></h2>
+          <p>投稿日: 2025年1月29日</p>
+          <p>さらに別のブログ記事の概要がここに表示されます。記事詳細を読んでください。</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

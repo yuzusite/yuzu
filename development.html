@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新しい開発メモ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- ハンバーガーメニューアイコン -->
+        <ul class="menu">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="blog.html">ブログ</a></li>
+          <li><a href="development.html">開発メモ</a></li> <!-- 新しい開発メモページのリンク -->
+        </ul>
+        <div class="menu-close" onclick="closeMenu()">&#10005;</div> <!-- バツボタン -->
+      </nav>
+    </header>
+
+    <main>
+        <h1>サイト構築メモ</h1>
+            <p>ローカルサーバーで動的にサイト確認する方法
+
+            <br><br>
+            
+            ・ターミナルで"python3 -m http.server 8000"と入力
+            
+            <br><br>
+            
+            ・ブラウザで"http://localhost:8000"にアクセスする</p>
+    </main>
+  </div>
+</body>
+
+</html>
