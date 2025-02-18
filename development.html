@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>新しい開発メモ</title>
+  <title>メモ - ゆずさいと</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="container">
-    <header>
-      <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- ハンバーガーメニューアイコン -->
-        <ul class="menu">
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="profile.html">プロフィール</a></li>
-          <li><a href="blog.html">ブログ</a></li>
-          <li><a href="development.html">開発メモ</a></li> <!-- 新しい開発メモページのリンク -->
-        </ul>
-        <div class="menu-close" onclick="closeMenu()">&#10005;</div> <!-- バツボタン -->
-      </nav>
-    </header>
 
-    <main>
-        <h1>サイト構築メモ</h1>
-            <p>ローカルサーバーで動的にサイト確認する方法
+  <header>
+    <div class="menu-toggle">☰</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="profile.html">プロフィール</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="development.html">メモ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <br><br>
-            
-            ・ターミナルで"python3 -m http.server 8000"と入力
-            
-            <br><br>
-            
-            ・ブラウザで"http://localhost:8000"にアクセスする</p>
-    </main>
-  </div>
+  <main>
+    <section class="hero">
+      <h1>メモ</h1>
+      <p>ゆずさいとの開発メモページです。</p>
+
+      <p>ローカルサーバーで動的にサイト確認する方法</p>
+
+      <p>ターミナルで"python3 -m http.server 8000"と入力</p>
+        
+      <p>ブラウザで"http://localhost:8000"にアクセスする</p>
+
+      <p>キャッシュを無視して強制リロードキーはCommand + Shift + R</p>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 ゆずさいと</p>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
-
 </html>

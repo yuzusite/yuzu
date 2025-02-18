@@ -1,50 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プロフィール</title>
+  <title>プロフィール - ゆずさいと</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
 </head>
-
 <body>
-  <div class="container">
-    <header>
-      <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- ハンバーガーメニューアイコン -->
-        <ul class="menu">
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="profile.html">プロフィール</a></li>
-          <li><a href="blog.html">ブログ</a></li>
-          <li><a href="development.html">開発メモ</a></li> <!-- 開発メモリンク -->
-        </ul>
-        <div class="menu-close" onclick="closeMenu()">&#10005;</div> <!-- バツボタン -->
-      </nav>
-    </header>
 
-    <main>
-      <h1>プッロフィール</h1>
+  <header>
+    <div class="menu-toggle">☰</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="profile.html">プロフィール</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="development.html">メモ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <div class="profile-section">
-        <div class="profile-image">
-          <img src="images/IMG_5114 2.JPG" alt="プロフィール写真" width="200">
-        </div>
-        <div class="profile-details">
-          <h2>名前: ゆず</h2>
-          <p>私はWeb開発者で、趣味はプログラミングと音楽です。新しい技術を学ぶことが好きで、日々挑戦しています。</p>
-          <p>お問い合わせ先: <a href="mailto:example@example.com">example@example.com</a></p>
-        </div>
-      </div>
+  <main>
+    <section class="hero">
+      <h2>プロフィール</h2>
+      <br><br>
+      <h2>名前: ゆず</h2>
 
-      <div class="skills">
-        <h3>スキル</h3>
+      <p>私はWeb開発者で、趣味はプログラミングと音楽です。新しい技術を学ぶことが好きで、日々挑戦しています。
         
-        <p>噛みつく、吠える、ドリフト、二度見</p>
-        </div>
-    </main>
-  </div>
-</body>
+        
+      <h2>スキル</h2>
+        
+      <p>噛みつく、吠える、ドリフト、二度見</p>
+    </section>
+  </main>
 
+  <footer>
+    <p>© 2025 ゆずさいと</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
 </html>

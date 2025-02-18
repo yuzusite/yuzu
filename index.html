@@ -1,54 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My New Site</title>
+  <title>ゆずさいと</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
 </head>
-
 <body>
-  <div class="container">
-    <header>
-      <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- ハンバーガーメニューアイコン -->
-        <ul class="menu">
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="profile.html">プロフィール</a></li>
-          <li><a href="blog.html">ブログ</a></li>
-          <li><a href="development.html">開発メモ</a></li> <!-- 開発メモリンク -->
-        </ul>
-        <div class="menu-close" onclick="closeMenu()">&#10005;</div> <!-- バツボタン -->
-      </nav>
-    </header>
 
-    <main>
-      <h1>ゆずさいとー</h1>
+  <header>
+    <div class="menu-toggle">☰</div> <!-- ハンバーガーメニュー -->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="profile.html">プロフィール</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="development.html">メモ</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <main>
+    <section class="hero">
+      <h1>ゆずさいと</h1>
       <p>wellcom to yuzu site</p>
-
-      <img src="images/IMG_5113 2.JPG" alt="IMG_5113" class="fade-in-right" width="300">
-
-      <br><br><br>
-
-      <p>ようこそここは私の絶対領域だ。名前はユッズイッヌサイトウ。一度でも呼び方を間違えたら殺す。</p>
+      <br>
+      <p>領域展開ッ。私の名前はユッズイッヌサイトウ。五条悟も震えるイッヌとは私だ。</p>
+      <br><br>
       
-    </main>
-  </div>
+
+    </section>
+  </main>
 
   <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 ゆずさいとー. All rights reserved.</p>
-      <ul class="footer-links">
-        <li><a href="privacy.html">プライバシーポリシー</a></li>
-        <li><a href="terms.html">利用規約</a></li>
-        <li><a href="contact.html">お問い合わせ</a></li>
-      </ul>
-    </div>
+    <p>© 2025 ゆずさいと</p>
   </footer>
-  
-  
-</body>
 
+  <script src="script.js"></script>
+
+
+</body>
 </html>
+ 

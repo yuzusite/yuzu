@@ -1,189 +1,270 @@
-/* ヘッダーの設定 */
-header {
-    background-color: rgba(0, 0, 0, 0.8); /* 半透明の背景色 */
-    color: white;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%; /* ヘッダーを画面幅いっぱいにする */
-    top: 0;
-    z-index: 1000;
-    left: 0;
-    margin-bottom: 20px; /* ヘッダーの下に余白 */
+/* リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-header .container {
-    max-width: 800px; /* メインの幅と一致させる */
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-
-/* メニュー */
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-left {
-    margin-right: auto;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 5px 10px;
-}
-
-.menu a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-}
-
-/* メインコンテンツの調整 */
-main {
-    padding: 70px 0; /* 左右の余白をなくす */
-    margin: 0;
-}
-
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-    padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-
-.container {
-    max-width: 800px; /* サイト全体の幅を狭くする */
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto; /* 中央揃え */
-    background-color: rgba(255, 255, 255, 0.8); /* 背景が薄く見える白色 */
-    border-radius: 10px; /* 角を丸くする */
+/* ヘッダー */
+header {
+  background: rgba(0, 0, 0, 0.6); /* 半透明 */
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  min-height: 60px; /* スマホ画面でも高さを確保 */
+  z-index: 1002; /* ハンバーガーメニューの後ろ */
+  transition: opacity 0.3s ease;
 }
 
-h1 {
-    color: #2c3e50;
+nav ul {
+  display: flex;
+  list-style: none;
+  padding-left: 20px;
 }
 
-/* ハンバーガーメニュー用 */
+nav li {
+  margin-right: 40px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* ヒーローセクション */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  background-image: url('images/IMG_5113 2.JPG');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  color: black;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: black;
+  font-size: 1.2rem;
+  line-height: 2;
+  max-width: 80%;
+}
+
+/* フッター */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ハンバーガーメニュー */
 .menu-toggle {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    position: relative;
-    margin-left: 10px; /* 左端から少し右に寄せる */
-    display: none;
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
 }
 
-
-.menu-close {
-    display: none; /* 初期状態では非表示 */
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 20px;
     font-size: 40px;
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
     color: white;
-}
+    z-index: 1004; /* 最前面 */
+  }
 
-@media (max-width: 768px) {
-    /* メニューのリスト全体はデフォルトで隠す */
-    .menu {
-        display: none;
-        width: 100%;
-        text-align: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        gap: 20px;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-    }
+  /* ヘッダーの高さを固定（狭くならないようにする） */
+  header {
+    min-height: 60px;
+  }
 
-    /* メニューを表示したときの設定 */
-    .menu.show {
-        display: flex;
-    }
-
-    /* ハンバーガーメニューアイコン */
-    .menu-toggle {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-    }
-
-    /* バツボタンの初期状態 */
-    .menu-close {
-        display: none;
-    }
-
-    /* メニューが表示されているときのバツボタン */
-    .menu-close.show {
-        display: block;
-    }
-
-    /* メニューが開いている時、bodyのスクロールを無効にする */
-    body.menu-open {
-        overflow: hidden;
-    }
-}
-
-/* フッターの設定 */
-footer {
-    background-color: #333; /* 背景色 */
-    color: white;
-    padding: 10px 0; /* 上下の余白 */
-    text-align: center;
-}
-
-footer .footer-container {
-    max-width: 800px; /* メインコンテンツと同じ最大幅 */
+  /* ハンバーガーメニュー */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 0 auto;
-}
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 1003; /* ヘッダーの前面 */
+  }
 
-footer .footer-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
+  /* メニューを開いたときにヘッダーを消さない */
+  header.hidden {
+    opacity: 1; /* ヘッダーを消さない */
+    pointer-events: auto;
+  }
 
-footer .footer-links li {
-    display: inline;
-    margin-right: 15px;
-}
+  /* メニューを開いたときの表示 */
+  .nav-links.active {
+    display: flex;
+  }
 
-footer .footer-links a {
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-links a {
     color: white;
+    font-size: 1.5rem;
     text-decoration: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+
+  /* blog.html専用のスタイル */
+body.blog-page {
+  background-color: white;
+  background-image: url('images/IMG_5113 2.JPG');
+  background-size: 40%; /* 背景画像を小さく */
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-footer .footer-links a:hover {
-    text-decoration: underline;
+body.blog-page header {
+  background: rgba(0, 0, 0, 0.6); /* 半透明 */
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1002;
+  transition: opacity 0.3s ease;
 }
 
+body.blog-page nav ul {
+  display: flex;
+  list-style: none;
+  padding-left: 20px;
+}
 
+body.blog-page nav li {
+  margin-right: 40px;
+}
+
+body.blog-page nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+body.blog-page main {
+  padding-top: 80px; /* ヘッダーの高さ分だけ余白を開ける */
+}
+
+body.blog-page .hero {
+  text-align: center;
+  padding: 40px 0;
+}
+
+body.blog-page .hero h1 {
+  font-size: 2.5rem;
+}
+
+body.blog-page .hero p {
+  font-size: 1.2rem;
+}
+
+body.blog-page .blog-posts {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+body.blog-page .blog-post {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+body.blog-page .blog-post h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+body.blog-page .blog-post .date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+body.blog-page .blog-post p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+body.blog-page footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+}
