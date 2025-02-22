@@ -100,6 +100,71 @@ footer {
   color: white;
 }
 
+/* bodyの背景色を白に戻す */
+body {
+  background-color: white !important; /* 赤を白に上書き */
+}
+
+/* プロフィールページ専用のスタイル */
+body.profile-page {
+  background-color: white !important; /* 背景を白に */
+}
+
+body.profile-page .hero {
+  background-color: white !important;
+  background-image: none !important;
+}
+
+/* プロフィール画像のスタイル */
+.profile-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+/* ブログページ専用のバナー設定 */
+.blog-page .blog-banner {
+  width: 100%;
+  height: 250px; /* バナーの高さを調整 */
+  background-image: url('images/IMG_5117 2.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* テキストを配置するため */
+}
+
+/* バナー上のテキスト */
+.blog-banner .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+
+/* ブログページで元の背景画像を消す */
+body.blog-page .hero {
+  background-image: none !important;
+  background-color: white !important;
+}
+
+
+
+
+
 /* スマホ対応 */
 @media (max-width: 600px) {
   .menu-toggle {
@@ -174,97 +239,8 @@ footer {
   }
 
 
-  /* blog.html専用のスタイル */
-body.blog-page {
-  background-color: white;
-  background-image: url('images/IMG_5113 2.JPG');
-  background-size: 40%; /* 背景画像を小さく */
-  background-position: center;
-  background-repeat: no-repeat;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
-body.blog-page header {
-  background: rgba(0, 0, 0, 0.6); /* 半透明 */
-  padding: 10px 20px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  z-index: 1002;
-  transition: opacity 0.3s ease;
-}
 
-body.blog-page nav ul {
-  display: flex;
-  list-style: none;
-  padding-left: 20px;
-}
-
-body.blog-page nav li {
-  margin-right: 40px;
-}
-
-body.blog-page nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-body.blog-page main {
-  padding-top: 80px; /* ヘッダーの高さ分だけ余白を開ける */
-}
-
-body.blog-page .hero {
-  text-align: center;
-  padding: 40px 0;
-}
-
-body.blog-page .hero h1 {
-  font-size: 2.5rem;
-}
-
-body.blog-page .hero p {
-  font-size: 1.2rem;
-}
-
-body.blog-page .blog-posts {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-body.blog-page .blog-post {
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0;
-}
-
-body.blog-page .blog-post h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-body.blog-page .blog-post .date {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-body.blog-page .blog-post p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-body.blog-page footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
-}
+  
 
 }
