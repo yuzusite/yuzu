@@ -115,6 +115,7 @@ body.profile-page .hero {
 .profile-section {
   text-align: center;
   padding: 40px 20px;
+  padding-top: 10px;
   background-color: white;
 }
 
@@ -251,7 +252,7 @@ body.blog-page .hero {
     display: block;
     position: absolute;
     top: 5px;
-    left: 20px;
+    right: 20px;
     font-size: 40px;
     cursor: pointer;
     color: white;
