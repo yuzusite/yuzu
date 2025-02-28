@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
       navLinks.classList.toggle("active");
     });
   }
+
+  
   
   // カレンダーの処理
   const calendar = document.getElementById("calendar");

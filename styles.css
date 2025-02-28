@@ -6,9 +6,12 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif; /* 日本語にNoto Sans JPを適用 */
+  font-weight: 400;  /* 通常のフォントの太さ */
   background-color: white !important; /* 背景色を白に */
+  
 }
+
 
 /* ヘッダー */
 header {
@@ -24,6 +27,7 @@ header {
   z-index: 1002;
   transition: opacity 0.3s ease;
 }
+
 
 nav ul {
   display: flex;
@@ -53,6 +57,7 @@ nav a {
   background-image: url('images/IMG_5113 2.JPG');
   background-size: cover;
   background-position: center;
+  padding-top: 70px;  /* ヘッダーの高さ分だけ開始位置を下げる */
 }
 
 .hero::before {
@@ -85,6 +90,7 @@ nav a {
   max-width: 80%;
 }
 
+
 /* フッター */
 footer {
   background: rgba(0, 0, 0, 0.8);
@@ -97,9 +103,44 @@ footer {
 .menu-toggle {
   display: none;
   font-size: 30px;
+  top: 50%;  /* 垂直方向の中央に配置 */
   cursor: pointer;
   color: white;
+  transform: translateY(-20%);  /* 50%だけ上にシフトして中央揃え */
 }
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* 背景の透明度 (0.4で少し暗く) */
+  z-index: 1002;
+  display: none;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+/* メニュー項目のホバー時にホバー範囲を広げる */
+.nav-links li {
+  padding: 6px 8px;  /* 普通の状態のpadding */
+}
+
+/* メニューが表示された時のリストアイテムのホバー効果 */
+.nav-links li:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* アイテムの背景色を変更 */
+ 
+}
+
+/* メニューリンクのホバー効果 */
+.nav-links a:hover {
+  color: #f2f1ef;  /* リンクの色を変更 */
+}
+
+
 
 /* プロフィールページ専用のスタイル */
 body.profile-page {
@@ -298,6 +339,7 @@ body.blog-page .hero {
     color: white;
     font-size: 1.5rem;
     text-decoration: none;
+    
   }
 
   .hero h1 {
