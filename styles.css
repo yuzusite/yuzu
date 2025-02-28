@@ -128,6 +128,10 @@ body.profile-page .hero {
   margin-bottom: 20px;
 }
 
+.banner-text {
+  white-space: nowrap; /* 改行させない */
+}
+
 /* ブログページ専用のバナー設定 */
 .blog-page .blog-banner {
   width: 100%;
